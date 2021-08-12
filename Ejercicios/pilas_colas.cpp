@@ -1,5 +1,12 @@
 #include <bits/stdc++.h>
 
+/*
+Implementación de las pilas y las colas extendidas usando la clase stack de la stl, en dichas pilas
+se guarda el elemento mínimo, se puede extender para poder guardar el máximo elemento con una nueva pareja
+@Author: Daniel Vallejo Aldana
+@Institution: Universidad de Guanajuato, Licenciatura en Computación
+*/
+
 using namespace std;
 
 template<class T> class exstack
@@ -69,10 +76,7 @@ public:
   T back()
   {
     exchage();
-    if (!sstack.empty())
-    {
-      return sstack.top();
-    }
+    return sstack.top();
   }
   T minel()
   {
