@@ -49,17 +49,17 @@ public:
     {
       if (current->r == NULL)
       {
-        current->r=new Tnode<T> (item);
+        current->r=new Tnode<T> (item,current);
       }
-      else walk2insert(item,current->r);
+      else walk2insert(item);
     }
     else
     {
       if(current->l==NULL)
       {
-        current->l=new Tnode<T> (item);
+        current->l=new Tnode<T> (item,current);
       }
-      else walk2insert(item,current->l);
+      else walk2insert(item);
     }
   }
   void insert(T item)
@@ -114,7 +114,6 @@ public:
   {
     return Max(&root);
   }
-
 };
 
 int main()
